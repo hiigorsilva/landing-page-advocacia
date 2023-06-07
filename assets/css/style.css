@@ -430,3 +430,41 @@
   font-weight: 400;
   color: var(--bgWhite);
 }
+.about {
+  padding: 7.5rem 0;
+  background: url("../imagens/bg-about.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+.about .content .leftside {
+  flex: 1;
+}
+.about .content .leftside img {
+  margin-top: -13rem;
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about .content .rightside {
+  flex: 1;
+}
+.about .content .rightside h2 {
+  max-width: 26.875rem;
+  margin: 1rem 0;
+}
+.about .content .rightside p {
+  max-width: 26.875rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grayText);
+  line-height: 1.4;
+}
