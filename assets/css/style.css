@@ -84,6 +84,11 @@
   background-repeat: no-repeat;
   padding: 7.5rem 0;
 }
+.hero .header img {
+  display: block;
+  max-width: 16.75rem;
+  width: 100%;
+}
 .hero .content {
   display: flex;
   gap: 2rem;
@@ -238,15 +243,24 @@
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 .differential .box .item {
   display: flex;
   max-width: 22.5rem;
   width: 100%;
-  height: 39rem;
+  min-height: 39rem;
+  height: fit-content;
   background-position: center center;
   background-repeat: no-repeat;
+  border-radius: 4px;
   box-shadow: 4px 4px 1.5rem var(--Shadow);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 .differential .box .item:nth-child(1) {
   background-image: url("../imagens/differential-card-1.png");
@@ -279,6 +293,8 @@
 }
 .differential .cta {
   margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*:::::::::: CASES ::::::::::*/
@@ -481,6 +497,8 @@
 }
 .indemnity .content img {
   display: block;
+  max-width: 16.75rem;
+  width: 100%;
   margin: 0 auto;
 }
 .indemnity .content .img-indemnity {
@@ -512,7 +530,7 @@
 }
 .indemnity-number .btn-arrow-down {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   right: 0;
   display: flex;
@@ -529,8 +547,9 @@
   line-height: 1.4;
 }
 .indemnity-number .content span.value {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 600;
+  text-transform: uppercase;
   margin-top: 1rem 0;
 }
 .indemnity-number .content span:nth-child(3) {
@@ -584,39 +603,153 @@
   opacity: 0.8;
 }
 
-/*:::::::::: BUTTON WHATSAPP ::::::::::*/
-.btn-whatsapp {
-  position: fixed;
-  right: 10%;
-  bottom: 10%;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  cursor: pointer;
-  box-shadow: 2px 2px 1rem var(--Shadow);
-  transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
+/*:::::::::: RESPONSIVIDADE ::::::::::*/
+@media (max-width: 1180px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
-.btn-whatsapp:hover {
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
+@media (max-width: 1024px) {
+  .hero {
+    padding: 2rem 0 5rem 0;
+  }
+  .hero .header img {
+    margin: 0 auto;
+  }
+  .hero .content {
+    flex-direction: column-reverse;
+    gap: 0;
+    margin-top: 2rem;
+  }
+  .hero .img-hero img {
+    max-width: 37.5rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero .content .headline {
+    max-width: 42rem;
+    text-align: center;
+    margin-top: -3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero .content .headline p,
+  .hero .content .headline a.cta {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .solutions {
+    padding: 5rem 0;
+  }
+  .solutions .top {
+    flex-direction: column;
+  }
+  .solutions .top .leftside img {
+    max-width: 26.25rem;
+    width: 100%;
+    height: auto;
+  }
+  .solutions .top .rightside {
+    text-align: center;
+  }
+  .differential {
+    padding: 5rem 1.25rem;
+  }
+  .cases {
+    padding: 5rem 0;
+  }
+  .cases .box-cases .item .text-content p {
+    margin: 1rem 0;
+  }
+  .about {
+    padding: 5rem 0;
+  }
+  .about .content .leftside img {
+    margin-top: -9rem;
+  }
 }
-.btn-whatsapp img {
-  display: block;
-  width: 100%;
+@media (max-width: 900px) {
+  .cases .box-cases .item,
+  .cases .box-cases .item:nth-child(even) {
+    flex-direction: column;
+  }
+  .cases .box-cases .item .img-case img {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .cases .box-cases .item .text-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .cases .box-cases .item .text-content .item-title {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .cases .box-cases .item .text-content p {
+    margin: 1rem 0;
+  }
+  .cases .box-cases .item .text-content .btn-more {
+    margin: 0 auto;
+  }
+  .statistics .numbers .item span {
+    font-size: 3rem;
+  }
+  .about .content {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about .content .leftside img {
+    max-width: 15.625rem;
+    width: 100%;
+  }
+  .about .content .rightside {
+    text-align: center;
+  }
+  .about .content .rightside img {
+    display: block;
+    max-width: 16.75rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .cases .box-cases .item .img-case img {
+    width: 90%;
+  }
+  .indemnity-number .content span.value {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 675px) {
+  .solutions .box-card .card,
+  .differential .box .item {
+    max-width: 35.625rem;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .statistics .numbers {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .cta {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .cases .box-cases .item .text-content .btn-more {
+    justify-content: center;
+    max-width: 100%;
+  }
 }
