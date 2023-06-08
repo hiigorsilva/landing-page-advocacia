@@ -430,6 +430,9 @@
   font-weight: 400;
   color: var(--bgWhite);
 }
+
+/*:::::::::: ABOUT ::::::::::*/
+
 .about {
   padding: 7.5rem 0;
   background: url("../imagens/bg-about.jpg");
@@ -467,4 +470,115 @@
   font-weight: 400;
   color: var(--grayText);
   line-height: 1.4;
+}
+
+/*:::::::::: INDEMNITY ::::::::::*/
+
+.indemnity {
+  padding: 5rem 0 3rem 0;
+  background-color: var(--bgWhite);
+}
+.indemnity .content img {
+  display: block;
+  margin: 0 auto;
+}
+.indemnity .content .img-indemnity {
+  margin: 4rem 0;
+}
+.indemnity .content .img-indemnity img {
+  display: block;
+  max-width: 90%;
+  width: 100%;
+}
+.indemnity .content h2 {
+  max-width: 36rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.indemnity .content p {
+  max-width: 22rem;
+  text-align: center;
+  margin: 1rem auto 0 auto;
+}
+
+/*:::::::::: INDEMNITY NUMBER ::::::::::*/
+
+.indemnity-number {
+  position: relative;
+  padding: 5rem 0;
+  background-color: var(--bgDark);
+}
+.indemnity-number .btn-arrow-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+.indemnity-number .content {
+  max-width: 37.5rem;
+}
+.indemnity-number .content span {
+  display: block;
+  font-size: 1.125rem;
+  text-align: center;
+  color: var(--bgWhite);
+  line-height: 1.4;
+}
+.indemnity-number .content span.value {
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin-top: 1rem 0;
+}
+.indemnity-number .content span:nth-child(3) {
+  max-width: 30.625rem;
+  margin: 0 auto 3rem auto;
+}
+
+/*:::::::::: FOOTER ::::::::::*/
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--bgDark);
+  padding: 2rem 0;
+}
+.footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 10%,
+    var(--accent) 50%,
+    transparent 90%
+  );
+}
+.footer .copy,
+.footer a {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--bgWhite);
+}
+.footer a {
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.footer a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
