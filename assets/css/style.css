@@ -675,6 +675,9 @@
   .cases .box-cases .item:nth-child(even) {
     flex-direction: column;
   }
+  .cases .box-cases .item {
+    gap: 1rem;
+  }
   .cases .box-cases .item .img-case img {
     width: 75%;
     margin: 0 auto;
@@ -731,6 +734,21 @@
   }
 }
 @media (max-width: 600px) {
+  .title {
+    font-size: 1.625rem;
+  }
+  .hero .content .headline h1 {
+    font-size: 1.625rem;
+  }
+  .hero .content .headline p {
+    font-size: 1rem;
+  }
+  .cases .box-cases .item .img-case img {
+    width: 100%;
+  }
+  .cases .box-cases .item .text-content .item-title h3 {
+    font-size: 1.375rem;
+  }
   .statistics .numbers {
     flex-direction: column;
     justify-content: center;
